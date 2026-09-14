@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUILD. LEARN. INNOVATE. | STEM & Robotics</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cyberDark: '#0A0E1A',
+                        cyberCard: '#131A2E',
+                        neonCyan: '#00F0FF',
+                        neonPurple: '#8A2BE2',
+                        neonYellow: '#FFD700',
+                    },
+                    boxShadow: {
+                        glowCyan: '0 0 20px rgba(0, 240, 255, 0.35)',
+                        glowPurple: '0 0 20px rgba(138, 43, 226, 0.35)',
+                        glowYellow: '0 0 20px rgba(255, 215, 0, 0.35)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glow-text-cyan { text-shadow: 0 0 12px rgba(0, 240, 255, 0.7); }
+        .glow-text-yellow { text-shadow: 0 0 12px rgba(255, 215, 0, 0.7); }
+        .bg-cyber-grid {
+            background-image: radial-gradient(rgba(0, 240, 255, 0.1) 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+    </style>
+</head>
+<body class="bg-cyberDark text-slate-100 font-sans antialiased selection:bg-neonCyan selection:text-cyberDark bg-cyber-grid min-h-screen flex flex-col justify-between">
+
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-cyberDark/80 border-b border-neonCyan/20">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <i data-lucide="cpu" class="w-8 h-8 text-neonCyan animate-pulse"></i>
+                <span class="font-extrabold text-xl tracking-wider glow-text-cyan text-neonCyan">BUILD. LEARN. INNOVATE.</span>
+            </div>
+            <nav class="hidden md:flex space-x-8 text-sm font-semibold tracking-wide">
+                <a href="#about" class="hover:text-neonCyan transition-colors">About</a>
+                <a href="#mission" class="hover:text-neonCyan transition-colors">Mission</a>
+                <a href="#program" class="hover:text-neonCyan transition-colors">Program</a>
+                <a href="#contact" class="hover:text-neonCyan transition-colors">Contact</a>
+            </nav>
+            <a href="#register" class="px-5 py-2.5 rounded-full bg-gradient-to-r from-neonCyan to-neonPurple text-cyberDark font-bold shadow-glowCyan hover:scale-105 transition-transform duration-200">
+                Join Interest List
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative py-20 px-6 max-w-7xl mx-auto text-center">
+        <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full border border-neonYellow/40 bg-neonYellow/10 text-neonYellow text-xs font-bold uppercase tracking-wider mb-6 shadow-glowYellow">
+            <i data-lucide="sparkles" class="w-4 h-4"></i>
+            <span>Grades 3–5 | LEGO Engineering | Robotics | Snap Circuits</span>
+        </div>
+        
+        <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6">
+            <span class="bg-gradient-to-r from-neonCyan via-white to-neonPurple bg-clip-text text-transparent">BUILD. LEARN. INNOVATE.</span>
+        </h1>
+        <p class="text-xl md:text-2xl text-slate-300 max-w-3xl mx-auto font-light mb-12">
+            Inspiring Young Minds Through STEM and Robotics.
+        </p>
+
+        <!-- 4 Key Pillars -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+            <div class="p-6 rounded-2xl bg-cyberCard border border-neonCyan/30 hover:border-neonCyan shadow-glowCyan transition-all duration-300 transform hover:-translate-y-2">
+                <i data-lucide="wrench" class="w-10 h-10 text-neonCyan mx-auto mb-3"></i>
+                <h3 class="font-bold text-lg">HANDS-ON LEARNING</h3>
+            </div>
+            <div class="p-6 rounded-2xl bg-cyberCard border border-neonPurple/30 hover:border-neonPurple shadow-glowPurple transition-all duration-300 transform hover:-translate-y-2">
+                <i data-lucide="users" class="w-10 h-10 text-neonPurple mx-auto mb-3"></i>
+                <h3 class="font-bold text-lg">TEAMWORK</h3>
+            </div>
+            <div class="p-6 rounded-2xl bg-cyberCard border border-neonYellow/30 hover:border-neonYellow shadow-glowYellow transition-all duration-300 transform hover:-translate-y-2">
+                <i data-lucide="brain-circuit" class="w-10 h-10 text-neonYellow mx-auto mb-3"></i>
+                <h3 class="font-bold text-lg">PROBLEM SOLVING</h3>
+            </div>
+            <div class="p-6 rounded-2xl bg-cyberCard border border-neonCyan/30 hover:border-neonCyan shadow-glowCyan transition-all duration-300 transform hover:-translate-y-2">
+                <i data-lucide="rocket" class="w-10 h-10 text-neonCyan mx-auto mb-3"></i>
+                <h3 class="font-bold text-lg">FUTURE READY</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section id="mission" class="py-16 px-6 max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="p-8 rounded-3xl bg-cyberCard/90 border border-neonCyan/40 shadow-glowCyan relative overflow-hidden">
+                <div class="flex items-center space-x-4 mb-4">
+                    <div class="p-3 rounded-xl bg-neonCyan/10 text-neonCyan">
+                        <i data-lucide="target" class="w-8 h-8"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold">MISSION</h2>
+                </div>
+                <p class="text-slate-300 leading-relaxed">
+                    Inspire students to explore the aspects of science, technology, engineering, and mathematics through fun and engaging hands-on activities that promote creativity, teamwork, and critical thinking. Students learn by being immersed in the fundamentals of building, experimenting, and solving real-world challenges in a supportive environment.
+                </p>
+            </div>
+
+            <div class="p-8 rounded-3xl bg-cyberCard/90 border border-neonPurple/40 shadow-glowPurple relative overflow-hidden">
+                <div class="flex items-center space-x-4 mb-4">
+                    <div class="p-3 rounded-xl bg-neonPurple/10 text-neonPurple">
+                        <i data-lucide="lightbulb" class="w-8 h-8"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold">VISION</h2>
+                </div>
+                <p class="text-slate-300 leading-relaxed">
+                    Create an environment where students can imagine, design, build, and innovate together while developing the skills needed to complete activities and solve challenges.
+                </p>
+                <p class="mt-4 font-semibold text-neonYellow glow-text-yellow">
+                    Building the Next Generation of Engineers, Innovators, and Problem Solvers.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About & Core Values -->
+    <section id="about" class="py-16 px-6 max-w-7xl mx-auto">
+        <div class="p-8 md:p-12 rounded-3xl bg-cyberCard border border-slate-700 shadow-xl">
+            <div class="max-w-3xl">
+                <span class="text-neonCyan font-bold tracking-widest uppercase text-sm">About Us</span>
+                <h2 class="text-4xl font-extrabold mt-2 mb-6">WHO WE ARE</h2>
+                <p class="text-slate-300 text-lg leading-relaxed mb-6">
+                    My name is <strong class="text-white">Jessica Hines</strong>, and I am a Sophomore (Gr.10) at Henry J. Kaiser High School. Growing up, I always had an interest in the world of engineering, especially through exposure to LEGO. This program was created to pass down the same luxury I had to provide local students with opportunities to explore engineering and robotics through hands-on projects.
+                </p>
+                <p class="text-slate-300 text-lg leading-relaxed mb-8">
+                    The goal is to make STEM accessible, engaging, and fun while helping students develop skills that will benefit them throughout their education and future.
+                </p>
+            </div>
+
+            <h3 class="text-sm font-bold tracking-widest uppercase text-slate-400 mb-4">CORE VALUES</h3>
+            <div class="flex flex-wrap gap-3">
+                <span class="px-4 py-2 rounded-xl bg-neonCyan/10 border border-neonCyan/50 text-neonCyan font-semibold">CURIOSITY</span>
+                <span class="px-4 py-2 rounded-xl bg-neonPurple/10 border border-neonPurple/50 text-neonPurple font-semibold">CREATIVITY</span>
+                <span class="px-4 py-2 rounded-xl bg-neonYellow/10 border border-neonYellow/50 text-neonYellow font-semibold">COLLABORATION</span>
+                <span class="px-4 py-2 rounded-xl bg-neonCyan/10 border border-neonCyan/50 text-neonCyan font-semibold">INNOVATION</span>
+                <span class="px-4 py-2 rounded-xl bg-neonPurple/10 border border-neonPurple/50 text-neonPurple font-semibold">COMMUNITY</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Program Structure -->
+    <section id="program" class="py-16 px-6 max-w-7xl mx-auto">
+        <div class="text-center mb-12">
+            <span class="text-neonYellow font-bold tracking-widest uppercase text-sm">Program Breakdown</span>
+            <h2 class="text-4xl font-extrabold mt-2">SESSION STRUCTURE</h2>
+            <p class="text-slate-400 mt-2">Each session is planned and designed to be fun, educational, and engaging.</p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="p-6 rounded-2xl bg-cyberCard border border-slate-700 hover:border-neonCyan transition-all">
+                <div class="text-3xl font-black text-neonCyan mb-2">01</div>
+                <h3 class="font-bold text-lg">WELCOME & STEM LESSON</h3>
+                <span class="inline-block px-3 py-1 mt-3 rounded-full bg-slate-800 text-slate-300 text-xs font-semibold">10 Minutes</span>
+            </div>
+            <div class="p-6 rounded-2xl bg-cyberCard border border-slate-700 hover:border-neonPurple transition-all">
+                <div class="text-3xl font-black text-neonPurple mb-2">02</div>
+                <h3 class="font-bold text-lg">BUILDING CHALLENGE</h3>
+                <span class="inline-block px-3 py-1 mt-3 rounded-full bg-slate-800 text-slate-300 text-xs font-semibold">35 Minutes</span>
+            </div>
+            <div class="p-6 rounded-2xl bg-cyberCard border border-slate-700 hover:border-neonYellow transition-all">
+                <div class="text-3xl font-black text-neonYellow mb-2">03</div>
+                <h3 class="font-bold text-lg">TEAM SHOWCASE</h3>
+                <span class="inline-block px-3 py-1 mt-3 rounded-full bg-slate-800 text-slate-300 text-xs font-semibold">10 Minutes</span>
+            </div>
+            <div class="p-6 rounded-2xl bg-cyberCard border border-slate-700 hover:border-neonCyan transition-all">
+                <div class="text-3xl font-black text-neonCyan mb-2">04</div>
+                <h3 class="font-bold text-lg">CLEAN-UP & REFLECTION</h3>
+                <span class="inline-block px-3 py-1 mt-3 rounded-full bg-slate-800 text-slate-300 text-xs font-semibold">5 Minutes</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Forms Section -->
+    <section id="register" class="py-16 px-6 max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-12">
+            <!-- Registration Form -->
+            <div id="contact" class="p-8 rounded-3xl bg-cyberCard border border-neonCyan/30 shadow-glowCyan">
+                <h3 class="text-2xl font-bold mb-2">Join Our Interest List</h3>
+                <p class="text-slate-400 text-sm mb-6">Interested families can complete this registration form to enter and receive updates on upcoming sessions.</p>
+                <form class="space-y-4" onsubmit="event.preventDefault();">
+                    <div>
+                        <label class="block text-sm font-medium mb-1 text-slate-300">Name</label>
+                        <input type="text" placeholder="Your Full Name" class="w-full px-4 py-3 rounded-xl bg-cyberDark border border-slate-700 focus:border-neonCyan focus:outline-none transition-colors text-white">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-1 text-slate-300">Email address</label>
+                        <input type="email" placeholder="name@example.com" class="w-full px-4 py-3 rounded-xl bg-cyberDark border border-slate-700 focus:border-neonCyan focus:outline-none transition-colors text-white">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-1 text-slate-300">Leave a message</label>
+                        <textarea rows="3" placeholder="Tell us about your student..." class="w-full px-4 py-3 rounded-xl bg-cyberDark border border-slate-700 focus:border-neonCyan focus:outline-none transition-colors text-white"></textarea>
+                    </div>
+                    <button class="w-full py-3.5 rounded-xl bg-neonCyan text-cyberDark font-bold hover:shadow-glowCyan transition-all">Submit Registration</button>
+                </form>
+            </div>
+
+            <!-- Inquiry Form -->
+            <div class="p-8 rounded-3xl bg-cyberCard border border-neonYellow/30 shadow-glowYellow">
+                <h3 class="text-2xl font-bold mb-2">Make an Inquiry</h3>
+                <p class="text-slate-400 text-sm mb-6">Have questions before joining? Send us a direct inquiry!</p>
+                <form class="space-y-4" onsubmit="event.preventDefault();">
+                    <div>
+                        <label class="block text-sm font-medium mb-1 text-slate-300">What would you like to know?</label>
+                        <textarea rows="4" placeholder="Ask your question here..." class="w-full px-4 py-3 rounded-xl bg-cyberDark border border-slate-700 focus:border-neonYellow focus:outline-none transition-colors text-white"></textarea>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-1 text-slate-300">Enter your email*</label>
+                        <input type="email" required placeholder="name@example.com" class="w-full px-4 py-3 rounded-xl bg-cyberDark border border-slate-700 focus:border-neonYellow focus:outline-none transition-colors text-white">
+                    </div>
+                    <button class="w-full py-3.5 rounded-xl bg-neonYellow text-cyberDark font-bold hover:shadow-glowYellow transition-all">Inquire Now</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-800 bg-cyberDark/90 py-10 px-6 mt-12">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center space-x-3">
+                <i data-lucide="cpu" class="w-6 h-6 text-neonCyan"></i>
+                <span class="font-extrabold text-lg text-neonCyan tracking-wider">BUILD. LEARN. INNOVATE.</span>
+            </div>
+            <p class="text-slate-500 text-sm">© STEM & Robotics Pilot Program. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
