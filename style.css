@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap');
+
+/* Base Styles */
+:root {
+  --bg-dark: #0A0E1A;
+  --card-dark: #131A2E;
+  --neon-cyan: #00F0FF;
+  --neon-purple: #8A2BE2;
+  --neon-yellow: #FFD700;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: #f1f5f9;
+  font-family: 'Inter', sans-serif;
+  background-image: radial-gradient(rgba(0, 240, 255, 0.1) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+/* Glow Utilities */
+.glow-text-cyan {
+  text-shadow: 0 0 12px rgba(0, 240, 255, 0.7);
+}
+
+.glow-text-yellow {
+  text-shadow: 0 0 12px rgba(255, 215, 0, 0.7);
+}
+
+.glow-box-cyan {
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.35);
+}
+
+.glow-box-purple {
+  box-shadow: 0 0 20px rgba(138, 43, 226, 0.35);
+}
+
+.glow-box-yellow {
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.35);
+}
+
+/* Dynamic Hover Effects */
+.card-cyber {
+  background-color: var(--card-dark);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-cyber:hover {
+  transform: translateY(-5px);
+}
